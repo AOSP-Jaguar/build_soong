@@ -36,7 +36,7 @@ var hiddenAPISingletonPathsKey = android.NewOnceKey("hiddenAPISingletonPathsKey"
 func hiddenAPISingletonPaths(ctx android.PathContext) hiddenAPISingletonPathsStruct {
 	return ctx.Config().Once(hiddenAPISingletonPathsKey, func() interface{} {
 		return hiddenAPISingletonPathsStruct{
-			stubFlags: android.PathForOutput(ctx, "hiddenapi", "hiddenapi-stub-flags.txt"),
+			stubFlags: android.PathForOutput(ctx, "hiddenapi"),
 			flags:     android.PathForOutput(ctx, "hiddenapi", "hiddenapi-flags.csv"),
 			metadata:  android.PathForOutput(ctx, "hiddenapi", "hiddenapi-greylist.csv"),
 		}

@@ -125,7 +125,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"XTENDED_VERSION",
+	"JAGUAR_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -157,20 +157,11 @@ func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
         fmt.Fprintln(b, "============================================================")
-        fmt.Fprintln(b, "                                                            ")
-        fmt.Fprintln(b, "      ██╗  ██╗██████╗█████╗█╗   █╗████╗ █████╗████╗         ")
-        fmt.Fprintln(b, "      ╚██╗██╔╝╚═██╔═╝█╔═══╝██╗  █║█╔══█╗█╔═══╝█╔══█╗        ")
-        fmt.Fprintln(b, "       ╚███╔╝   ██║  ████╗ █╔█╗ █║█║  █║████╗ █║  █║        ")
-        fmt.Fprintln(b, "       ██╔██╗   ██║  █╔══╝ █║╚█╗█║█║  █║█╔══╝ █║  █║        ")
-        fmt.Fprintln(b, "      ██╔╝ ██╗  ██║  █████╗█║ ╚██║████╔╝█████╗████╔╝        ")
-        fmt.Fprintln(b, "      ╚═╝  ╚═╝  ╚═╝  ╚════╝╚╝  ╚═╝╚═══╝ ╚════╝╚═══╝         ")
-        fmt.Fprintln(b, "                                                            ")
+        fmt.Fprintln(b, "                   Welcom to Jaguar Rom                  ")
         fmt.Fprintln(b, "============================================================")
-        fmt.Fprintln(b, "                   Be Ready To Get Xtended                  ")
+        fmt.Fprintln(b, "               Jaguar Rom by Optimumpro              ")
         fmt.Fprintln(b, "============================================================")
-        fmt.Fprintln(b, "               MSM Xtended ROM by Team-Xtended              ")
-        fmt.Fprintln(b, "============================================================")
-	fmt.Fprintf(b, "%s=%s\n", "XTENDED_VERSION", make_vars["XTENDED_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "JAGUAR_VERSION", make_vars["JAGUAR_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])

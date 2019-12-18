@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"xtended/soong/android"
+	"jaguar/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -127,8 +127,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include Xtended variables
-		Xtended android.Product_variables
+		// include Jaguar variables
+		Jaguar android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -293,8 +293,8 @@ type productVariables struct {
 
 	TargetFSConfigGen []string `json:",omitempty"`
 
-	// include Xtended variables
-	Xtended android.ProductVariables
+	// include Jaguar variables
+	Jaguar android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
